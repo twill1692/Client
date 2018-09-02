@@ -1,0 +1,16 @@
+<form>
+    <h1 mat-dialog-title>Welcome</h1>
+    <mat-dialog-content>
+        Content goes here
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <div id="gameOptions">
+            <button (click)="newGame()">New Game</button>
+            <button (click)="Load()">Load</button>
+        </div>
+        <div hidden="true">
+            <button class="mat-raised-button" (click)="close()">Close</button>
+            <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+        </div>
+    </mat-dialog-actions>
+</form>
