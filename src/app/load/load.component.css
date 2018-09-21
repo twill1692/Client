@@ -1,3 +1,5 @@
-#gameOptions{
-    justify-content: center;
+#loadContainer{
+    position: relative;
+    text-align: center;
+    margin-top: 15%;
 }

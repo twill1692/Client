@@ -1,5 +1,5 @@
 html {
-    background-image: url('/src/assets/images/Scroll.jpg');
+    background-image: url('/src/assets/images/dungeon.jpg');
     position: relative;
     background-repeat: no-repeat;
     background-size: 100% 100vh;
@@ -8,13 +8,18 @@ html, body { height: 100%; }
 
 body { margin: 0; font-family: 'Roboto', sans-serif; }
 
-.diaStyle{
+/* .diaStyle{
     height: 50vh;
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 25vh;
     margin-bottom: 25vh;
-    background-image: url('/src/assets/images/dungeon.jpg'); 
     background-size: 100% 100%;
+} */
+
+.mat-dialog-container {
+    background-color: darkslategrey;
+    position: relative;
     background-repeat: no-repeat;
+    background-size: 100% 100vh;
 }

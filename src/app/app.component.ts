@@ -19,7 +19,6 @@ export class AppComponent{
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.panelClass = "diaStyle";
     this.diaRef = this.dialog.open(LoadComponent, dialogConfig);
   }
 
