@@ -8,7 +8,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./load.component.css']
 })
 export class LoadComponent implements OnInit {
-  profile; 
+  profile :FormGroup; 
 
   constructor(private dialogRef: MatDialogRef<LoadComponent>) {
       this.profile = new FormGroup({
@@ -18,5 +18,6 @@ export class LoadComponent implements OnInit {
     }
 
   ngOnInit() {
+    console.log("Hello from oninit");
   }
 }
