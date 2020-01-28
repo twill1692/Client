@@ -1,0 +1,11 @@
+button {
+  width: 30vh;
+  height: 8vh;
+  color: black;
+  background-color: slategray;
+}
+
+#btnBorder {
+  border: darkred;
+  border-style:ridge;
+}

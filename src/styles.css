@@ -1,25 +1,26 @@
-html {
-    background-image: url('/src/assets/images/dungeon.jpg');
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: 100% 100vh;
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-html, body { height: 100%; }
+.introDia .mat-dialog-container {
+  height: 50vh;
+  width: 50vh;
+  border-style: groove;
+  background-size: 100% 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  background-color: black;
+  color: red;
+}
 
-body { margin: 0; font-family: 'Roboto', sans-serif; }
-
-/* .diaStyle{
-    height: 50vh;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 25vh;
-    margin-bottom: 25vh;
-    background-size: 100% 100%;
-} */
-
-.mat-dialog-container {
-    background-color: darkslategrey;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: 100% 100vh;
+.introDia .mat-dialog-title {
+  padding-top: 10%;
+}
+.introDia .mat-dialog-actions {
+  padding-top: 10%;
 }
