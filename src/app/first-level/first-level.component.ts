@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs-compat';
-import { onErrorResumeNext } from 'rxjs-compat/operator/onErrorResumeNext';
+// import { Observable } from 'rxjs-compat';
+// import { onErrorResumeNext } from 'rxjs-compat/operator/onErrorResumeNext';
 
 @Component({
   selector: 'app-first-level',
