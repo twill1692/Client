@@ -4,21 +4,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 // import { onErrorResumeNext } from 'rxjs-compat/operator/onErrorResumeNext';
 
 @Component({
-  selector: 'app-first-level',
-  templateUrl: './first-level.component.html',
-  styleUrls: ['./first-level.component.css']
+  selector: 'new-game',
+  templateUrl: './new-game.component.html',
+  styleUrls: ['./new-game.component.css']
 })
 
-export class FirstLevelComponent implements OnInit {
+export class NewGameComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router) {
-    console.log('first level component constructor');
-
-    //step one, a subscriber 
+    console.log('new game component constructor');
   }
 
   ngOnInit() {
-    console.log('first level component ngoninit');
+    console.log('new game component ngoninit');
   }
 
 }

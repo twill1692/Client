@@ -3,26 +3,26 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-intro',
-  templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.css']
+  selector: 'save-load',
+  templateUrl: './save-load.component.html',
+  styleUrls: ['./save-load.component.css']
 })
 
-export class IntroComponent implements OnInit {
+export class SaveLoadComponent implements OnInit {
 
-  constructor(private dialogRef: MatDialogRef<IntroComponent>,
+  constructor(private dialogRef: MatDialogRef<SaveLoadComponent>,
     private route: ActivatedRoute, private router: Router) {
-      console.log('intro component constructor');
+      console.log('save-load component constructor');
   }
 
   ngOnInit(): void {
-    console.log('intro component ngoninit');
+    console.log('save-load component ngoninit');
   }
 
   newGame() {
     console.log('you clicked new game.');
     this.dialogRef.close();
-    this.router.navigate(['level-one']);
+    this.router.navigate(['new-game']);
   }
 
   loadGame() {

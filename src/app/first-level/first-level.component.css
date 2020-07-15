@@ -1,9 +1,0 @@
-.background {
-  background-image: url("../../assets/images/dungeon.jpg");
-  height: 100vh;
-  width: 100%;
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}

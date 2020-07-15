@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FirstLevelComponent } from './first-level.component';
+import { NewGameComponent } from './new-game.component';
 
 describe('FirstLevelComponent', () => {
-  let component: FirstLevelComponent;
-  let fixture: ComponentFixture<FirstLevelComponent>;
+  let component: NewGameComponent;
+  let fixture: ComponentFixture<NewGameComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FirstLevelComponent ]
+      declarations: [ NewGameComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FirstLevelComponent);
+    fixture = TestBed.createComponent(NewGameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

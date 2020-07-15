@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
-import { IntroComponent } from './intro/intro.component';
+import { SaveLoadComponent } from './save-load/save-load.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -13,7 +13,7 @@ import { map } from 'rxjs/operators';
 
 export class AppComponent implements OnInit {
   title: String = 'myAppClient';
-  diaRef: MatDialogRef<IntroComponent>;
+  diaRef: MatDialogRef<SaveLoadComponent>;
   url: Subscription;
   home: String;
 
@@ -37,6 +37,6 @@ export class AppComponent implements OnInit {
     dialogConfig.panelClass = 'introDia';
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    this.diaRef = this.dialog.open(IntroComponent, dialogConfig);
+    this.diaRef = this.dialog.open(SaveLoadComponent, dialogConfig);
   }
 }
