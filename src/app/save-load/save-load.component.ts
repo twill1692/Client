@@ -9,10 +9,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 
 export class SaveLoadComponent implements OnInit {
-
+  
   constructor(private dialogRef: MatDialogRef<SaveLoadComponent>,
     private route: ActivatedRoute, private router: Router) {
-      console.log('save-load component constructor');
+    console.log('save-load component constructor');
   }
 
   ngOnInit(): void {
@@ -25,7 +25,7 @@ export class SaveLoadComponent implements OnInit {
     this.router.navigate(['new-game']);
   }
 
-  loadGame() {
-    console.log('you clicked load game');
+  continue() {
+    console.log('you clicked continue');
   }
 }

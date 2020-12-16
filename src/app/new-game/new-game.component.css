@@ -1,0 +1,31 @@
+.newGame {
+  display: grid;
+  background-image: url("../../assets/images/dungeon.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.newGameForm {
+  display: grid;
+  background-image: url("../../assets/images/Scroll.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-style: outset;
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  left: 25%;
+  right: 25%;
+}
+
+.newGameLabel {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}

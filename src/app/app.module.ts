@@ -19,7 +19,7 @@ const appRouts: Routes = [
   declarations: [
     AppComponent,
     SaveLoadComponent,
-    NewGameComponent
+    NewGameComponent,
   ],
   imports: [
     BrowserModule,

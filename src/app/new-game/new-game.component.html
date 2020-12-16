@@ -1,0 +1,13 @@
+<div class="newGame" routerLinkActive="newGame">
+    <form class="newGameForm" [formGroup]="newPlayerForm" (ngSubmit)="onSubmit()">
+        <span class="newGameLabel">
+            <label>
+                <input type="text" formControlName="firstName">
+            </label>
+            <label>
+                <input type="text" formControlName="lastName">
+            </label>
+            <button type="submit" [disabled]="!newPlayerForm.valid">Start</button>
+        </span>
+    </form>
+</div>

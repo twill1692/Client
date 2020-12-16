@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-// import { Observable } from 'rxjs-compat';
-// import { onErrorResumeNext } from 'rxjs-compat/operator/onErrorResumeNext';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'new-game',
@@ -10,6 +9,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 
 export class NewGameComponent implements OnInit {
+  newPlayerForm = new FormGroup({
+    firstName: new FormControl('First Name'),
+    lastName: new FormControl('Last Name'),
+  });
 
   constructor(private route: ActivatedRoute, private router: Router) {
     console.log('new game component constructor');
@@ -19,4 +22,7 @@ export class NewGameComponent implements OnInit {
     console.log('new game component ngoninit');
   }
 
+  onSubmit() {
+    console.log('Your name was entered ' + this.newPlayerForm.get('firstName').value);
+  }
 }
