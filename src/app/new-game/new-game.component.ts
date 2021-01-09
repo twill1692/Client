@@ -9,9 +9,10 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 
 export class NewGameComponent implements OnInit {
+
   newPlayerForm = new FormGroup({
-    firstName: new FormControl('First Name'),
-    lastName: new FormControl('Last Name'),
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
   });
 
   constructor(private route: ActivatedRoute, private router: Router) {
@@ -23,6 +24,7 @@ export class NewGameComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('Your name was entered ' + this.newPlayerForm.get('firstName').value);
+    console.log(`Your name was entered as ${this.newPlayerForm.get('firstName').value} ` +
+    `${this.newPlayerForm.get('lastName').value}`);
   }
 }

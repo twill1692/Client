@@ -8,6 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { NewGameComponent } from './new-game/new-game.component';
+import { HttpClientModule } from '@angular/common/http';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { StoreModule } from '@ngrx/store';
+import { EntityDataModule } from '@ngrx/data';
+import { entityConfig } from './entity-metadata';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { reducers, metaReducers } from './reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { AppEffects } from './app.effects';
 
 const appRouts: Routes = [
   { path: 'home', component: AppComponent },
@@ -19,7 +29,7 @@ const appRouts: Routes = [
   declarations: [
     AppComponent,
     SaveLoadComponent,
-    NewGameComponent,
+    NewGameComponent
   ],
   imports: [
     BrowserModule,
@@ -28,10 +38,19 @@ const appRouts: Routes = [
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRouts,
       { enableTracing: false }
-    )
+    ),
+    StoreRouterConnectingModule.forRoot(),
+    StoreModule.forRoot({}, {}),
+    EntityDataModule.forRoot(entityConfig),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    StoreModule.forRoot(reducers, {
+      metaReducers
+    }),
+    EffectsModule.forRoot([AppEffects])
   ],
   providers: [],
   bootstrap: [AppComponent],

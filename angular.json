@@ -97,6 +97,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
+            "experimentalDecorators": true,
             "tsConfig": [
               "src/tsconfig.app.json",
               "src/tsconfig.spec.json"
@@ -136,5 +137,8 @@
       }
     }
   },
-  "defaultProject": "myAppClient"
+  "defaultProject": "myAppClient",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
