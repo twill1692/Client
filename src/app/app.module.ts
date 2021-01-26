@@ -18,6 +18,7 @@ import { environment } from '../environments/environment';
 import { reducers, metaReducers } from './reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
+import { playerReducer } from './new-game/new-game.reducer';
 
 const appRouts: Routes = [
   { path: 'home', component: AppComponent },
@@ -44,7 +45,7 @@ const appRouts: Routes = [
       { enableTracing: false }
     ),
     StoreRouterConnectingModule.forRoot(),
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({player: playerReducer}),
     EntityDataModule.forRoot(entityConfig),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     StoreModule.forRoot(reducers, {
