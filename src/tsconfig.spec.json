@@ -7,6 +7,11 @@
       "node"
     ]
   },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "preserveWhitespaces": true,
+    "strictTemplates": true
+  },
   "files": [
     "test.ts",
     "polyfills.ts"

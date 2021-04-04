@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Player } from '../models/player.model';
 import { Store, select } from '@ngrx/store';
-import { selectPlayer } from '../state/player.selectors';
+// import { selectPlayer } from '../state/player.selectors';
 import { createPlayer } from './new-game.action';
 import { Subscriber, Subscription } from 'rxjs-compat';
 
@@ -15,7 +15,7 @@ import { Subscriber, Subscription } from 'rxjs-compat';
 
 export class NewGameComponent implements OnInit {
   //Returns observable.
-  player$ = this.store.pipe(select(selectPlayer));
+  // player$ = this.store.pipe(select(selectPlayer));
   player: Player;
   playerSub: Subscription;
   newPlayerForm = new FormGroup({
@@ -31,12 +31,12 @@ export class NewGameComponent implements OnInit {
     console.log(player);
     this.store.dispatch(createPlayer({ player }));
     //You have to subcribe to get at the value, but its there in the observable object.
-    console.log(this.player$);
-    this.playerSub = this.player$.subscribe({
-      next(value) {
-        console.log(value);
-      }
-    });
+    // console.log(this.player$);
+    // this.playerSub = this.player$.subscribe({
+    //   next(value) {
+    //     console.log(value);
+    //   }
+    // });
   }
   ngOnInit() {
     console.log('new game component ngoninit');
@@ -47,6 +47,6 @@ export class NewGameComponent implements OnInit {
       firstName: this.newPlayerForm.get('firstName').value,
       lastName: this.newPlayerForm.get('lastName').value
     }
-    this.savePlayer(this.player);
+    // this.savePlayer(this.player);
   }
 }

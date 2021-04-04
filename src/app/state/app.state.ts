@@ -1,5 +1,5 @@
-import { Player } from '../models/player.model'
+// import { Player } from '../models/player.model'
 
-export interface AppState {
-  player: Player;
-}
+// export interface AppState {
+//   player: Player;
+// }

@@ -5,6 +5,9 @@
     "types": [],
     "experimentalDecorators": true
   },
+  "angularCompilerOptions": {
+    "strictTemplates": true
+  },
   "files": [
     "main.ts",
     "polyfills.ts"

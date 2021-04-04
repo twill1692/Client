@@ -1,10 +1,21 @@
 import { createReducer, on, Action } from '@ngrx/store';
 import { createPlayer } from './new-game.action';
-import { Player } from '../models/player.model';
 
-export const initialState = Player;
 
-export const playerReducer = createReducer(
-  initialState,
-  on(createPlayer, (state, { player }) => Player)
-);
+export interface State {
+  Player: {
+    firstName: String,
+    lastName: String
+  }
+}
+
+export const initialState: State = {
+  Player: {
+    firstName: 'default',
+    lastName: 'Player'
+  }
+};
+
+// export const playerReducer = createReducer(
+// //stuff
+// );
